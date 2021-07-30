@@ -21,12 +21,23 @@ header {
   background-color: var(--secondary);
 }
 
+#search-box {
+    height:100%
+}
+
+
 #search-button {
     background-color: var(--light);
 }
 
-#city-Bar{
+#city-Bar , #five-day {
     background-color: var(--light);
-    border-style: var(--dark);
-    
+  
+
 }
+
+#five-day {
+    justify-content: flex-end;
+}
+
+

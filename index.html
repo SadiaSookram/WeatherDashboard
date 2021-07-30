@@ -17,29 +17,44 @@
      <h1 class="page-title">Weather Dashboard ⛅</h1>
      </header> 
      
- <main class="row min-vh-100">
+ <main class="row min-vh-100 no-gutters">
 <!--Search Bar--> 
 <div class="col-3 d-flex flex-column">
-<div class="row">
-<div class="container" id="search-box">
-         <input type="search" class="form-control rounded" placeholder="Search for City" aria-label="Search for City" aria-describedby="search-addon" />
+<div class="container flex-column" id="search-box">
+    <div class="row">
+    <input type="search" class="form-control rounded" placeholder="Search for City" aria-label="Search for City" aria-describedby="search-addon" />
         </div>
-        </div>
-        
+    </div>
+              
 <!--Search Bar Button-->
 <button type="button" class="btn btn-outline-primary" id="search-button">
     Search</button>
-</div> 
+    </div>
+
+ 
 <!--City Specific Container-->
-<div class="col-8 d-flex flex-column">
-<div class="row">
-<div class="container" id="city-Bar">
-            <h3 id="City">I am the City!</h3>
-        
-        </div>
+<div class="col-8 d-flex flex-row border border-info">
+    <div class="container" id="city-Bar">
+    <div class="row">
+    <h3 id="City">I am the City!</h3>
+</div>
+</div>
+</div>
+
+ <!--5 day Forecast container-->
+ <div class="col-8 d-flex flex-row border border-info">
+     <div class="container" id="five-day">
+    <h3 id="forecast">5 day Forecast:</h3>
+        <p>
+
+        </p>
+    </div>
     </div>
 </div>
- 
+</div>
+
+
+
 
 
 
