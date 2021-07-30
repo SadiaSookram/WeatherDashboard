@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
+</head>
+
+
+<body>
+<!--Page Title-->
+ <header class="headerbar">
+     <h1 class="page-title">Weather Dashboard ⛅</h1>
+     </header> 
+     
+ <main class="row min-vh-100">
+<!--Search Bar--> 
+<div class="col-3 d-flex flex-column">
+<div class="row">
+<div class="container" id="search-box">
+         <input type="search" class="form-control rounded" placeholder="Search for City" aria-label="Search for City" aria-describedby="search-addon" />
+        </div>
+        </div>
+        
+<!--Search Bar Button-->
+<button type="button" class="btn btn-outline-primary" id="search-button">
+    Search</button>
+</div> 
+<!--City Specific Container-->
+<div class="col-8 d-flex flex-column">
+<div class="row">
+<div class="container" id="city-Bar">
+            <h3 id="City">I am the City!</h3>
+        
+        </div>
+    </div>
+</div>
+ 
+
+
+
+</main>
+</body>
+</html>

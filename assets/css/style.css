@@ -1,0 +1,32 @@
+:root {
+    --primary: #99d6ff;
+    --secondary: #0099ff;
+    --tertiary: #f2f2f2; 
+    --light:#e6f5ff;
+    --dark:#0066ff;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary);
+}
+
+/* Page Title Styles */
+header {
+  color: var(--light); 
+  text-align: center; 
+  background-color: var(--secondary);
+}
+
+#search-button {
+    background-color: var(--light);
+}
+
+#city-Bar{
+    background-color: var(--light);
+    border-style: var(--dark);
+    
+}
