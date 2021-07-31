@@ -20,8 +20,7 @@
  <main class="row min-vh-100 no-gutters">
 <!--Search Bar--> 
 <div class="col-4 d-flex flex-column">
-<div class="container flex-column" id="search-box">
-    <div class="row">
+<div class="flex-column" id="search-box">
     <input type="search" class="form-control rounded" placeholder="Search for City" aria-label="Search for City" aria-describedby="search-addon" />
         
    
@@ -31,29 +30,27 @@
     Search</button>
     </div>
 </div>
-</div>
+
 
  
-<!--City Specific Container-->
-<div class="col-8 d-flex flex-row border border-info">
-    <div class="container" id="city-Bar">
+<!--Local Storage Container-->
+<div class="col-8 d-flex flex-row border container" id="city-Bar">
+    <div>
         <h3 id="City">I am the City!</h3>
 </div>
 </div>
-
 <!--Local storage search history-->
-<div class="col-4 d-flex flex-row">
+<div class="col-4 d-flex flex-column border border-info" id=saved-locations>
     <div></div>
 </div>
  <!--5 day Forecast container-->
- <div class="col-8 d-flex flex-row border border-info">
-     <div class="container" id="five-day">
-    <h3 id="forecast">5 day Forecast:</h3>
+ <div class="col-8 d-flex flex-row border container" id="five-day">
+     <h3 id="forecast">5 day Forecast:</h3>
         <p>
 
         </p>
     </div>
-    </div>
+    
 
 
 

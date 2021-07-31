@@ -7,12 +7,17 @@
 }
 
 *{
-    box-sizing: border-box;
+   width: auto;
+      
 }
+
+  
 
 body {
     background-color: var(--primary);
+    
 }
+
 
 /* Page Title Styles */
 header {
@@ -22,23 +27,35 @@ header {
 }
 
 #search-box {
-    height:100%
+    margin-bottom: 15px;
+    width: 400px;
 }
 
+#search-box :placeholder-shown {
+ font-weight: bold;
+
+}
 
 #search-button {
     background-color: var(--light);
+    width: 400px;
     
 }
 
 #city-Bar , #five-day {
+    font-weight: bold;
     background-color: var(--light);
-  
+    max-height: 300px;
 
 }
 
-#five-day {
-    justify-content: flex-end;
+#saved-locations {
+    height: 200px;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
 }
+
+
 
 
