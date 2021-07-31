@@ -3,10 +3,14 @@ var selectedCity = document.getElementById("City")
 var savedLocations = document.getElementById("saved-locations")
 var Forecast = document.getElementById("foreecast")
 var btnEl = document.getElementById("search-button")
+var MY_KEY = "appid={86a94257cfc1d5b519e9cb0cc8fea855}"
+var SECRET_KEY = "appid={86a94257cfc1d5b519e9cb0cc8fea855}"
+var mykey = config.MY_KEY;
+var secretkey = config.SECRET_KEY;
+
 // Get weather for searched city
 var cityCurrentWeather = function(city) {
-var getApi = "api.openweathermap.org/data/2.5/weather?q={city name}&appid={86a94257cfc1d5b519e9cb0cc8fea855} 
-
+var getApi = "api.openweathermap.org/data/2.5/weather?q=&" + city + MY_KEY;
 // Make request by search
 fetch(getApi).then(function(response) {
     // response comes back correct
