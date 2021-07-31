@@ -22,10 +22,12 @@
 <!--Search Bar--> 
 <div class="col-4 d-flex flex-column">
 <div class="flex-column" id="search-box">
-    <input id="city" type="text" class="form-control rounded" placeholder="Search for City" aria-label="Search for City" aria-describedby="search-addon" />             
+    <form id="searchForm" onsubmit="submitForm(event)">
+    <input name="city" id="city" type="text" class="form-control rounded" placeholder="Search for City" aria-label="Search for City" aria-describedby="search-addon" />             
 <!--Search Bar Button-->
 <button type="submit" class="btn btn-outline-primary" id="searchButton">
     Search</button>
+    </form>
     </div>
 </div>
 

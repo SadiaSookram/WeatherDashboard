@@ -1,4 +1,5 @@
 var searchBox = document.getElementById("search-box");
+var submitFormEl = document.getElementById("searchForm")
 var cityInputEl = document.getElementById("city");
 var cityCurrentContainerEl = document.getElementById("city-choice")
 var cityNameEl = document.getElementById("cityname");
@@ -33,7 +34,7 @@ fetch(getApi).then(function(response) {
     
 });
 // User input to searchbar
-var searchButtonSubmit  = function(event) {
+var submitFormEl  = function(event) {
     event.preventDefault();
     var cityinput = cityInputEl.value.trim();
     // once user enters city specified
@@ -71,7 +72,7 @@ var cityWeather = function(searchBox, city) {
         searchEl.textContent = (city) 
         // append name to button and buttons to box
         searchEl.appendChild(searchEl.textContent);
-        searchEl.appendChild(searchBox);
+        searchEl.appendChild(searchForm);
 
 
     }
@@ -83,4 +84,4 @@ var btnEl = function(event){}
   
 
 // Event Listeners 
-searchButtonEl.addEventListener("click", searchButtonSubmit);
+submitFormEl.addEventListener("submit", submitFormEl);
