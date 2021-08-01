@@ -22,8 +22,8 @@
 <!--Search Bar--> 
 <div class="col-4 d-flex flex-column">
 <div class="flex-column" id="search-box">
-    <form id="searchForm" onsubmit="submitForm(event)">
-    <input name="city" id="city" type="text" class="form-control rounded" placeholder="Search for City" aria-label="Search for City" aria-describedby="search-addon" />             
+    <form id="searchForm">
+    <input name="city" id="citySearch" type="text" class="form-control rounded" placeholder="Search for City" aria-label="Search for City" aria-describedby="search-addon" />             
 <!--Search Bar Button-->
 <button type="submit" class="btn btn-outline-primary" id="searchButton">
     Search</button>
@@ -33,7 +33,7 @@
 
 <!--Specific Location Searched-->
 <div class="col-8 d-flex flex-row border container" id="city-choice">
-    <h3 id="cityname"></h3>
+    <h3 id="citynames"></h3>
 </div>
 <!--Local storage search history-->
 <div class="col-4 d-flex flex-column border border-info buttons" id=saved-locations>
