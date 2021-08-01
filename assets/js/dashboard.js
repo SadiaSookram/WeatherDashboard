@@ -46,12 +46,14 @@ let object = {
     
 // User input to searchbar
     function CitySearch() {
+        console.log('clicked')
     const city= window.userInput = document.getElementById('citySearch').value;
     
     console.log(city); 
     
-    if (citySearch === 0)
+    if (citySearch === '')
     alert("You havent entered a city! Try again");
+    FuncSearch(City);
     };
 
     //searchButton = document.getElementById('searchButton');
