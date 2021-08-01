@@ -55,7 +55,7 @@ let object = {
     };
 
     //searchButton = document.getElementById('searchButton');
-    searchButtonEl.addEventListener('click',citySearch)
+    searchButtonEl.addEventListener('click',CitySearch)
 
     
 

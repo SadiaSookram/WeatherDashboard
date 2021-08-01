@@ -36,10 +36,16 @@ header {
 
 }
 
-#search-button {
+#searchButton {
     background-color: var(--light);
     width: 400px;
     
+    
+}
+
+.buttons {
+    background-color: var(--light);
+    width: 400px;
 }
 
 #city-Bar , #five-day {
