@@ -15,20 +15,27 @@
 
 body {
     background-color: var(--primary);
-    display: flexbox;
+    
 }
 
 
 /* Page Title Styles */
-header {
+.headerbar {
   color: var(--light); 
   text-align: center; 
   background-color: var(--secondary);
 }
 
-#search-box {
+#city-choice , #five-day {
+    font-weight: bold;
+    background-color: var(--light);
+   
+
+}
+
+ #search-box {
     margin-bottom: 15px;
-    width: 400px;
+    width: 200px;
 }
 
 #search-box :placeholder-shown {
@@ -48,19 +55,8 @@ header {
     width: 400px;
 }
 
-#city-choice , #five-day {
-    font-weight: bold;
-    background-color: var(--light);
-   
 
-}
 
-#saved-locations {
-    height: 200px;
-    width: 500px;
-    display: flex;
-    flex-direction: row;
-}
 
 
 

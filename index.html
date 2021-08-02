@@ -13,50 +13,55 @@
 
 <body>
 <!--Page Title-->
- <header class="headerbar">
+ <div class="headerbar jumbotron container-fluid text-center p-2 align-items-center">
      <h1 class="page-title">Weather Dashboard ⛅</h1>
-    </header> 
-     
-<!--Page Layout-->    
- <main class="min-vh-100 no-gutters">
+ </div> 
+
 <!--Search Bar--> 
-<div>
-<div id="search-box">
+<div class="container-fluid">
+<div class="row py-3">
+<div class= "col-3 order-2" id="sticky-sidebar search-box">
+    <div class="sticky-top">
     <form id="searchForm">
     <input name="city" id="citySearch" type="text" class="form-control rounded" placeholder="Search for City" aria-label="Search for City" aria-describedby="search-addon" />             
 <!--Search Bar Button-->
     <button type="button" class="btn btn-outline-primary" id="searchButton">
     Search</button>
     </form>
-    </div>
-</div>
+
 <!--Local storage search history-->
 <div id="saved-locations">
-    
+ <ul class="Createdsavedlocations">
+
+ </ul>   
 </div>
+</div>
+</div>
+</div>
+<!--Page Layout-->    
+<main class="align-items-center min-vh-100">
 <!--Specific Location Searched-->
-<div id="city-choice">
-    <card id="currentDay">
-        <h3 class="name"></h3>
-        <p class="temp"></p>
-        <p class="icons"></p>
-        <p class="humidity"></p>
-        <p class="Summary"></p>
-    </card>
+<div id="city-choice" class="col-sm-8 ml-auto">
+    <div class= "row border border-light rounded">
+        <div class="col-sm-12" id="current-day">
+      <h2 class="current-city"></h2>
+      <p>Date</p>
+      <p>Temperature|<span class="city-current" id="temp"></span></p>
+      <p>Humidity|<span class="city-current" id="humidity"></span></p>
+      <p>Wind speed|<span class="city-current" id="wind"></span></p>
+      <p>UV index|<span class="city-current" id="UV"></span></p>
 </div>
 
  <!--5 day Forecast container-->
- <div  id="five-day">
+ <div  id="five-day" class="col-sm-12 ">
      <h3 id="forecast">5 day Forecast:</h3>
-        <card id="daycard card1"></card>
-        <card id="daycard card2"></card>
-        <card id="daycard card3"></card>
-        <card id="daycard card4"></card>
-        <card id="daycard card5"></card>
+        <card id="daycard card1" class="col-sm-2 rounded"></card>
+        <card id="daycard card2" class="col-sm-2 rounded"></card>
+        <card id="daycard card3" class="col-sm-2 rounded"></card>
+        <card id="daycard card4" class="col-sm-2 rounded"></card>
+        <card id="daycard card5" class="col-sm-2 rounded"></card>
     </div>
-    
-
-
+    </div>
 </main>
 <script src="./assets/js/dashboard.js"></script>
 </body>
