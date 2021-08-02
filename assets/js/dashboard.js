@@ -28,12 +28,12 @@ function grabCity(param) {
      if (response.ok) {
          response.json().then(function(data) {
            console.log(data);
-           var Citydata = data['name'];;
+           var name = data['name'];;
            var temp = data['main']['temp'];
            var icon = data['main']['icon'];
            var hum = data ['main']['humidity'];
            var weatherValue = data['weather'][0]['description'];
-                  Citydata.innerhtml = cityValue;
+                  name.innerhtml = nameValue;
                   temp.innerhtml =  tempValue;
                   weatherValue.innerhtml= SummaryValue;
                   icon.innerhtml= iconsValue;
@@ -69,7 +69,7 @@ function grabCity(param) {
    
    };
    // Saving data in local storage
-   myStorage = myStorage.seItem(savedLocations);
+   //myStorage.seItem(savedLocations);
 
 
 
