@@ -15,7 +15,7 @@
 
 body {
     background-color: var(--primary);
-    
+    display: flexbox;
 }
 
 
@@ -38,7 +38,7 @@ header {
 
 #searchButton {
     background-color: var(--light);
-    width: 400px;
+    width: 305px;
     
     
 }
@@ -48,10 +48,10 @@ header {
     width: 400px;
 }
 
-#city-Bar , #five-day {
+#city-choice , #five-day {
     font-weight: bold;
     background-color: var(--light);
-    max-height: 300px;
+   
 
 }
 
@@ -61,6 +61,10 @@ header {
     display: flex;
     flex-direction: row;
 }
+
+
+
+
 
 
 

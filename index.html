@@ -18,39 +18,46 @@
     </header> 
      
 <!--Page Layout-->    
- <main class="row min-vh-100 no-gutters">
+ <main class="min-vh-100 no-gutters">
 <!--Search Bar--> 
-<div class="col-4 d-flex flex-column">
-<div class="flex-column" id="search-box">
+<div>
+<div id="search-box">
     <form id="searchForm">
     <input name="city" id="citySearch" type="text" class="form-control rounded" placeholder="Search for City" aria-label="Search for City" aria-describedby="search-addon" />             
 <!--Search Bar Button-->
-<button type="button" class="btn btn-outline-primary" id="searchButton">
+    <button type="button" class="btn btn-outline-primary" id="searchButton">
     Search</button>
     </form>
     </div>
 </div>
-
-<!--Specific Location Searched-->
-<div class="col-8 d-flex flex-row border container" id="city-choice">
-    <h3 id="citynames"></h3>    
-</div>
 <!--Local storage search history-->
-<div class="col-4 d-flex flex-column border buttons" id=saved-locations>
-    <div></div>
+<div id="saved-locations">
+    
 </div>
- <!--5 day Forecast container-->
- <div class="col-8 d-flex flex-row border container" id="five-day">
-     <h3 id="forecast">5 day Forecast:</h3>
-        <p>
+<!--Specific Location Searched-->
+<div id="city-choice">
+    <card id="currentDay">
+        <h3 class="city"></h3>
+        <p class="temp"></p>
+        <p class="Summary"></p>
+        <p class="humidity"></p>
+        <p class="Summary"></p>
+    </card>
+</div>
 
-        </p>
+ <!--5 day Forecast container-->
+ <div  id="five-day">
+     <h3 id="forecast">5 day Forecast:</h3>
+        <card id="daycard card1"></card>
+        <card id="daycard card2"></card>
+        <card id="daycard card3"></card>
+        <card id="daycard card4"></card>
+        <card id="daycard card5"></card>
     </div>
     
 
 
 </main>
-
 <script src="./assets/js/dashboard.js"></script>
 </body>
 </html>
