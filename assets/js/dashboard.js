@@ -2,7 +2,7 @@ var searchBox = document.getElementById("search-box");
 var submitFormEl = document.getElementById("searchForm")
 var cityCurrentContainerEl = document.getElementById("city-choice")
 var cityNameEl = document.getElementById("cityname");
-var savedLocations = document.getElementById("saved-locations");
+var savedLocations = document.getElementsByClassName("Createdsavedlocations");
 var Forecast = document.getElementById("foreecast");
 var searchButtonEl = document.getElementById("searchButton");
 var apiKey= "7fe1cc8350b277fdeddb1d18efc3c5c1"  
@@ -27,17 +27,7 @@ function grabCity(param) {
      // response comes back correct
      if (response.ok) {
          response.json().then(function(data) {
-           console.log(data);
-           var name = data['name'];;
-           var temp = data['main']['temp'];
-           var icon = data['main']['icon'];
-           var hum = data ['main']['humidity'];
-           var weatherValue = data['weather'][0]['description'];
-                  name.innerhtml = nameValue;
-                  temp.innerhtml =  tempValue;
-                  weatherValue.innerhtml= SummaryValue;
-                  icon.innerhtml= iconsValue;
-                  hum.innerhtml = humidityValue;
+           console.log(data); 
         });
      } else {
         alert("Issue: our server is unable to process");
@@ -45,31 +35,47 @@ function grabCity(param) {
  })
     .catch(function(error) {
     console.log("Something Happened!");
+   
 
 })};
    
 // Display Current Weather on Screen 
     function cityWeather(data){
-      var makeCard = document.getElementById("currentDay")
-   
 
-    } 
-
-
+    }
 // User input to searchbar
     function CitySearch() {
         console.log('clicked')
-    const city= window.userInput = document.getElementById('citySearch').value;
-    
+    var cityinput= document.getElementById('citySearch')     
+    const city = window.userInput = document.getElementById('citySearch').value;
     console.log(city);
+    
+    // Saving user input to local storage
+    localStorage.setItem('city', city.innerHTML);
   // If search bar left null
     if (citySearch === '')
     alert("You havent entered a city! Try again");
+    cityinput.value = " ";
     grabCity(city);
    
+
    };
-   // Saving data in local storage
-   //myStorage.seItem(savedLocations);
+
+ // Make Buttons and add them with local storage
+    function Buttoncity() {
+       var cityButtons = JSON.parse(localStorage.getItem('city'));
+       if (cityButtons === 0 || cityButtons == '') return;
+
+       for(var i=0; i<cityButtonsarr.length; i++){
+           var Buttoncities = document.createElement('button')
+           Buttoncities.className=("buttons", "Createdsavedlocations ")
+           Buttoncities.text=(Buttoncity[i])
+           Buttoncities.attributes=("type","button")
+           savedLocations.append (Buttoncities)    
+       }
+      
+    }
+   
 
 
 
