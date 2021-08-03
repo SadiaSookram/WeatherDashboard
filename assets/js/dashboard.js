@@ -28,6 +28,12 @@ function grabCity(param) {
      if (response.ok) {
          response.json().then(function(data) {
            console.log(data); 
+
+           //UVindex.innerHTML = getUv(data.coord.lat, data.coord.lon);
+           humidity.innerHTML = data.main.humidity;
+           wind.innerHTML = data.wind.speed + "  Miles Per Hour";
+           temp.innerHTML = data.main.temp + "  Degrees Fahrenheit";
+           cityname.innerHTML = param; 
         });
      } else {
         alert("Issue: our server is unable to process");
@@ -40,7 +46,7 @@ function grabCity(param) {
 })};
    
 // Display Current Weather on Screen 
-    function cityWeather(data){
+    function cityWeather(param){
 
     }
 // User input to searchbar
@@ -52,18 +58,21 @@ function grabCity(param) {
     
     // Saving user input to local storage
     localStorage.setItem('city', cityinput.value);
+    window.localStorage.setItem('city', JSON.stringify(cityinput.value));
+   
+     
   // If search bar left null
     if (citySearch === '')
     alert("You havent entered a city! Try again");
     cityinput.value = " ";
     grabCity(city);
-   
+    cityWeather(city);
 
    };
 
  // Make Buttons and add them with local storage
     function Buttoncity() {
-       var cityButtons = JSON.parse(localStorage.getItem('city'));
+       const cityButtons = JSON.parse(window.localStorage.getItem('city'));
        if (cityButtons === 0 || cityButtons == '') return;
        
        for(var i=0; i<cityButtons.length; i++){
@@ -71,7 +80,7 @@ function grabCity(param) {
            Buttoncities.className=("buttons", "Createdsavedlocations ")
            Buttoncities.text=(Buttoncity[i])
            Buttoncities.attributes=("type","button")
-           savedLocations.append (Buttoncities)    
+           appendChild(Buttoncities);   
        }
       
     }
