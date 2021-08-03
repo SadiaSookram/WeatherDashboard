@@ -51,7 +51,7 @@ function grabCity(param) {
     console.log(city);
     
     // Saving user input to local storage
-    localStorage.setItem('city', city.innerHTML);
+    localStorage.setItem('city', cityinput.value);
   // If search bar left null
     if (citySearch === '')
     alert("You havent entered a city! Try again");
@@ -65,8 +65,8 @@ function grabCity(param) {
     function Buttoncity() {
        var cityButtons = JSON.parse(localStorage.getItem('city'));
        if (cityButtons === 0 || cityButtons == '') return;
-
-       for(var i=0; i<cityButtonsarr.length; i++){
+       
+       for(var i=0; i<cityButtons.length; i++){
            var Buttoncities = document.createElement('button')
            Buttoncities.className=("buttons", "Createdsavedlocations ")
            Buttoncities.text=(Buttoncity[i])
