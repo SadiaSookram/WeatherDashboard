@@ -28,8 +28,7 @@ function grabCity(param) {
      if (response.ok) {
          response.json().then(function(data) {
            console.log(data); 
-
-           //UVindex.innerHTML = getUv(data.coord.lat, data.coord.lon);
+        //var UVindexfunc = getUV(data.coord.lat, data.coord.lon);
            humidity.innerHTML = data.main.humidity;
            wind.innerHTML = data.wind.speed + "  Miles Per Hour";
            temp.innerHTML = data.main.temp + "  Degrees Fahrenheit";
@@ -41,14 +40,37 @@ function grabCity(param) {
  })
     .catch(function(error) {
     console.log("Something Happened!");
-   
-
+   // Todays Date 
+  var currently = new Date().toLocaleDateString("en-US");
+   document.getElementById('datetime').innerHTML= currently
 })};
    
-// Display Current Weather on Screen 
+// Display Current Weather 5 day forecast on Screen 
     function cityWeather(param){
+        var getApiUrl ='https://api.openweathermap.org/data/2.5/forecast?&q=' + param + '&appid=7fe1cc8350b277fdeddb1d18efc3c5c1'
+        fetch(getApiUrl).then(function(response) {
+            // response comes back correct
+            if (response.ok) {
+                response.json().then(function(data) {
+                  console.log(data);
+                  //Create loop through list array in API 
+                //   for(var i=0; i>data.list.length; i++)
+                 
+                  
+                // });
 
+        // Retrieve Data for each day and add to innerHTML card associated
+
+    } else {
+        alert("Issue: our server is unable to process");
     }
+ })
+    .catch(function(error) {
+    console.log("Something Happened!");
+   
+
+})};       
+    
 // User input to searchbar
     function CitySearch() {
         console.log('clicked')
@@ -58,6 +80,7 @@ function grabCity(param) {
     
     // Saving user input to local storage
     localStorage.setItem('city', cityinput.value);
+    //citiesSearched.push(cityinput.value);
     window.localStorage.setItem('city', JSON.stringify(cityinput.value));
    
      
@@ -72,7 +95,7 @@ function grabCity(param) {
 
  // Make Buttons and add them with local storage
     function Buttoncity() {
-       const cityButtons = JSON.parse(window.localStorage.getItem('city'));
+       var cityButtons = JSON.parse(window.localStorage.getItem('city'));
        if (cityButtons === 0 || cityButtons == '') return;
        
        for(var i=0; i<cityButtons.length; i++){
@@ -80,11 +103,16 @@ function grabCity(param) {
            Buttoncities.className=("buttons", "Createdsavedlocations ")
            Buttoncities.text=(Buttoncity[i])
            Buttoncities.attributes=("type","button")
-           appendChild(Buttoncities);   
+           appendChild(Buttoncities); 
        }
-      
     }
-   
+    
+    
+
+
+      
+    
+
 
 
 
