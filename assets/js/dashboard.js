@@ -57,7 +57,7 @@ function grabCity(param) {
                 //   for(var i=0; i>data.list.length; i++)
                  
                   
-                // });
+                 });
 
         // Retrieve Data for each day and add to innerHTML card associated
 
